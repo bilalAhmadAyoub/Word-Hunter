@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- TO DO LIST:
+- CHANGE FOLDER TITLE TO "SIXTEEN GAME"
+- make sure game is playable on mobile (can click/tap or type, implement click/tap first)
+- make a pop-up that explains the directions for the game
+
+-->
+<html>
+    <head>
+        <title>Word Hunter Game</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="game.js" async></script>
+    </head>
+
+
+
+    <!-- THE GAME GRID -->
+
+    <!-- Assumption: Given 16 cells containing letters, with a minimum of 4 cells empty, 
+         Those empty cells can be filled with letters such that a the 16 letters can form a word
+         with a minimum of 4 letters. This is possible because, worst-case scenario, a four letter word
+         can be placed in the empty cells. -->
+    <body>
+        <header>
+            <div class="how-to-play-button"><a href="#how-to-play">HOW TO PLAY</a></div>
+            <div class="learn-more-button"><a href="#learn-more">Learn more</a></div>
+            <div id="color-button-1" class="color-button color1"></div>
+            <div id="color-button-2" class="color-button color2"></div>
+            <div id="color-button-3" class="color-button color3"></div>
+
+        </header>
+
+        <div class="game-section">
+            <div class="side-block score">
+                <div class="side-block-header">LEVEL:</div>
+                <div id="level-text" class="side-block-content">00</div>
+            </div>
+            <div class="game-grid">
+
+                <div class="game-row">
+                    <div id="cell-1" class="game-cell"><div id="cell-text-1" class="cell-text">A</div></div>
+                    <div id="cell-2" class="game-cell"><div id="cell-text-2" class="cell-text">B</div></div>
+                    <div id="cell-3" class="game-cell"><div id="cell-text-3" class="cell-text">C</div></div>
+                    <div id="cell-4" class="game-cell"><div id="cell-text-4" class="cell-text">D</div></div>
+                </div>
+                <div class="game-row">
+                    <div id="cell-5" class="game-cell"><div id="cell-text-5" class="cell-text">E</div></div>
+                    <div id="cell-6" class="game-cell"><div id="cell-text-6" class="cell-text">F</div></div>
+                    <div id="cell-7" class="game-cell"><div id="cell-text-7" class="cell-text">G</div></div>
+                    <div id="cell-8" class="game-cell"><div id="cell-text-8" class="cell-text">H</div></div>
+                </div>
+                <div class="game-row">
+                    <div id="cell-9" class="game-cell"><div id="cell-text-9" class="cell-text">I</div></div>
+                    <div id="cell-10" class="game-cell"><div id="cell-text-10" class="cell-text">J</div></div>
+                    <div id="cell-11" class="game-cell"><div id="cell-text-11" class="cell-text">K</div></div>
+                    <div id="cell-12" class="game-cell"><div id="cell-text-12" class="cell-text">L</div></div>
+                </div>
+                <div class="game-row">
+                    <div id="cell-13" class="game-cell"><div id="cell-text-13" class="cell-text">M</div></div>
+                    <div id="cell-14" class="game-cell"><div id="cell-text-14" class="cell-text">N</div></div>
+                    <div id="cell-15" class="game-cell"><div id="cell-text-15" class="cell-text">O</div></div>
+                    <div id="cell-16" class="game-cell"><div id="cell-text-16" class="cell-text">P</div></div>
+                </div>
+    
+                <!--
+                <div class="game-row">
+                    <div id="erase-button" class="erase-button">E</div>
+                    <div id="submit-button" class="submit-button">SUBMIT</div>
+                </div>
+            -->
+    
+    
+                <div class="game-row">
+                    <input type="text" id="type-bar" class="type-bar"><br>
+                </div>
+                
+            </div>
+
+            <div class="side-block longest-word">
+                <div class="side-block-header">SCORE:</div>
+                <div id="score-text" class="side-block-content">00</div>
+            </div>
+
+        </div>
+
+
+
+
+        <div id="how-to-play" class="text-section instructions-section">
+            <div id="instruction-section-image"><img src="/images/tutorial.GIF"></div>
+            <div id="instruction-section-text">
+                <div id="instruction-section-header">HOW TO PLAY</div>
+                <div id="instruction-section-body">Find a word (consisting of four or more characters) using the provided 16 letters and press enter to submit. A correct word increments your level by one and your score by the length of the word. Hint: there are always multiple words to find!</div>
+            </div>
+            
+
+        </div>
+
+
+        <div id="learn-more" class="text-section learn-more-section">
+            <div id="learn-more-section-text">
+                <div id="learn-more-section-header">LEARN MORE</div>
+                <div id="learn-more-section-body">When a player types a valid word, the letters making up the word are selected. An English dictionary is iterated through to find the longest word that can fit into the game grid such that the word contains as many non-selected letters as possible. If the longest word is composed of letters not found among the non-selected letters, the selected letters will be replaced with new letters so that the longest word can fit in the game grid. Any unchanged selected letters are replaced with random letters, the level is incremented by one, and the score is incremented by the number of selected letters.</div>
+            </div>
+
+            <div id="learn-more-section-image"><img src="/images/temp-image.png"></div>
+
+        </div>
+
+
+        <footer>
+            <div class="footer-created-by">Created by Bilal Ayoub</div>
+            <div class="footer-link"><a href="https://github.com/bilalAhmadAyoub/" target="_blank"><img src="/images/github.png"></a></div>
+            <div class="footer-link"><a href="https://www.linkedin.com/in/bilal-ayoub-875534165/" target="_blank"><img src="/images/linkedin.png"></a></div>
+
+        </footer>
+
+
+
+        
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
