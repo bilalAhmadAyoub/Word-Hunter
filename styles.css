@@ -1,0 +1,350 @@
+
+/* VARIABLES */
+
+:root {
+    --cell-color: rgba(255, 255, 255, 0.5);
+    --header-color: rgba(0, 0, 0, 0.6);
+    --selected-cell-color: white;
+    --type-bar-text: black;
+
+    --color-button-1: white;
+    --color-button-2: var(--header-color);
+    --color-button-3: var(--header-color);
+
+    /* background colors */
+    --background-color-1: #ee7752;
+    --background-color-2: #e73c7e;
+    --background-color-3: #23a6d5;
+    --background-color-4: #23d5ab;
+    --background-color-5: darkgreen;
+}
+
+
+html {
+    scroll-behavior: smooth; /* for scrolling to section when menu bar link is clicked */
+}
+
+
+body {
+    background: white;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    background: var(--header-color);
+    height: 8vh;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.how-to-play-button a{
+    display: flex;
+    align-items: center; /* center text vertically*/
+    justify-content: center; /* centers text horizontally*/
+    width: 15vh;
+    height: 5vh;
+    background: white;
+    margin-left: 6vh;
+    border-radius: 1.5vh;
+    color: black;
+    font-size: 1.5vh;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.how-to-play-button a:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.learn-more-button {
+    margin-left: 4vh;
+    color: maroon;
+    margin-right: auto;
+}
+
+.learn-more-button a{
+    text-decoration: none;
+    color: white;
+}
+
+.learn-more-button a:hover {
+    cursor: pointer;
+    border-bottom: 5px solid white;
+}
+
+.color-button {
+    height: 3vh;
+    width: 3vh;
+    border-radius: 50%;
+    margin-right: 2vh;
+    margin-left: 2vh;
+    border: 1vh solid var(--header-color); /* width / style / color */
+}
+
+.color-button:hover {
+    cursor: pointer;
+    border-color: white;
+}
+
+.color1 {
+    background: red;
+    border-color: var(--color-button-1);
+}
+
+.color2 {
+    background: #3A015C;
+    border-color: var(--color-button-2);
+}
+
+.color3 {
+    background: green;
+    border-color: var(--color-button-3);
+    margin-right: 6vh;
+}
+
+
+
+
+
+/* GAME GRID */
+
+.game-section {
+    display: flex;
+    justify-content: center;
+    border-radius: 10vh;
+    border: 1vh solid var(--cell-color);
+    margin: 10vh 15vw;
+}
+
+.side-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vh;
+    height: 20vh;
+    margin: 4vh;
+    background: var(--header-color);
+    color: var(--cell-color);
+    border-radius: 4vh;
+    vertical-align: middle;
+
+}
+
+.side-block-header {
+    display: flex;
+    font-size: 3vh;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+}
+
+.side-block-content {
+    display: flex;
+    font-size: 6vh;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+.game-grid {
+    margin: 0;
+    padding: 4vh 0vh;
+}
+
+.game-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-cell {
+    display: flex;
+    align-items: center; /* center text vertically*/
+    justify-content: center; /* centers text horizontally*/
+    width: 10vh;
+    height: 10vh;
+    background: var(--cell-color);
+    margin: 0 1vh 2vh 1vh; /* top left bottom right */
+    border-radius: 1vh;
+    transition: 0.25s;
+
+}
+
+.game-cell:hover {
+    background: var(--selected-cell-color);
+    cursor: pointer;
+}
+
+.cell-text {
+    font-size: 10vh;
+    font-weight: bold;
+    color: var(--header-color);
+
+}
+
+
+.type-bar {
+    background: var(--cell-color);
+    width: 46vh;
+    height: 50px;
+    font-size: 4vh;
+    font-weight: bold;
+    color: var(--type-bar-text);
+    border-radius: 1vh;
+    font-style: italic;
+}
+
+::placeholder {
+    color: var(--header-color);
+    opacity: 100%;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.text-section {
+    display: flex;
+    justify-content: center;
+    margin: 10vh 15vw;
+    background: var(--cell-color);
+}
+
+.instructions-section {
+    border-radius: 10vh 10vh 30vh 10vh;
+}
+
+#instruction-section-text {
+    color: var(--header-color);
+    margin: 5vh 10vh 5vh 5vh;
+}
+
+#instruction-section-header {
+    font-size: 7vh;
+    font-weight: bold;
+    padding-bottom: 1vh;
+}
+
+#instruction-section-image {
+    display: flex;
+    align-items: center;
+    width: 40vh;
+    height: auto;
+    padding: 1vh;
+    margin: 5vh 0vh 5vh 10vh;
+}
+
+#instruction-section-image img{
+    width: 40vh;
+    border-radius: 2vh;
+}
+
+#instruction-section-body {
+    font-size: 3vh;
+}
+
+.learn-more-section {
+    border-radius: 10vh 10vh 10vh 30vh;
+}
+
+#learn-more-section-text {
+    color: var(--header-color);
+    margin: 5vh 5vh 5vh 10vh;
+}
+
+#learn-more-section-header {
+    font-size: 7vh;
+    font-weight: bold;
+    padding-bottom: 1vh;
+}
+
+#learn-more-section-image {
+    display: flex;
+    align-items: center;
+    width: 40vh;
+    height: auto;
+    padding: 1vh;
+    margin: 5vh 10vh 5vh 0vh;
+}
+#learn-more-section-image img{
+    width: 40vh;
+}
+
+#learn-more-section-body {
+    font-size: 3vh;
+    text-align: right;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    background: var(--header-color);
+    height: 8vh;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer-created-by{
+    display: flex;
+    align-items: center; /* center text vertically*/
+    justify-content: center; /* centers text horizontally*/
+    width: 30vh;
+    height: 5vh;
+    background: var(--cell-color);
+    margin-left: 6vh;
+    margin-right: auto;
+    border-radius: 1.5vh;
+    color: var(--header-color);
+    font-size: 1.5vh;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-link {
+    margin-right: 4vh;
+}
+
+footer img {
+    width: 2vw;
+    filter: invert(100%); /* to make the black icons white */
+    animation: float 5s ease-in-out infinite;
+}
+
+footer img:hover {
+    filter: invert(75%); /* to make footer icons turn grey when hovered over */
+}
+
+@keyframes float { /* to make the footer icons appear as though they're pulsating */
+    0% {transform: scale(1);}
+    50% {transform: scale(1.25);}
+    100% {transform: scale(1);}
+}
+
+
+
+
+/* ANIMATED COLOR-CHANGING BACKGROUND */
+body {
+	background: linear-gradient(-75deg, var(--background-color-1), var(--background-color-2), var(--background-color-3), var(--background-color-4), var(--background-color-5)); 
+	background-size: 500% 500%; /* can add more colors and increase the 500% to a higher % */
+	animation: animate-background 10s infinite ease-in-out;
+}
+
+@keyframes animate-background {
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
+}
+
+
+
+
